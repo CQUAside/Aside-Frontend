@@ -1,0 +1,75 @@
+$aside-wrapper-w: 960px;
+$aside-form-w: 400px;
+$min-col-w: 80px;
+$aside-row-h: 40px;
+
+// common start
+body {
+    margin: 0;
+}
+input {
+    outline: none;
+}
+button {
+    height: 30px;
+    line-height: 30px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 0 10px;
+    outline: none;
+    cursor: pointer;
+}
+input[type="text"],
+input[type="password"] {
+    width: 200px;
+    height: 18px;
+    line-height: 18px;
+    padding: 2px;
+}
+.not-allowed {
+    cursor: not-allowed;
+}
+.fl {
+    display: block;
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clearfix:after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+    line-height: 0;
+    font-size: 0;
+}
+.align-center {
+    text-align: center;
+}
+// common end
+
+.aside-wapper {
+    width: $aside-wrapper-w;
+    margin: 0 auto;
+}
+.aside-form {
+    padding-top: 40px;
+    width: $aside-form-w;
+    margin: 0 auto;
+    label {
+        width: $min-col-w * 1;
+    }
+}
+.aside-row {
+    height: $aside-row-h;
+    line-height: $aside-row-h;
+}
+.aside-logo {
+    width: 200px;
+    img {
+        max-width: 200px;
+    }
+}

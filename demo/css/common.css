@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 0 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 200px;
+  height: 18px;
+  line-height: 18px;
+  padding: 2px;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+.fl {
+  display: block;
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:after {
+  content: "";
+  height: 0;
+  display: block;
+  clear: both;
+  line-height: 0;
+  font-size: 0;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.aside-wapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.aside-form {
+  padding-top: 40px;
+  width: 400px;
+  margin: 0 auto;
+}
+.aside-form label {
+  width: 80px;
+}
+
+.aside-row {
+  height: 40px;
+  line-height: 40px;
+}
+
+.aside-logo {
+  width: 200px;
+}
+.aside-logo img {
+  max-width: 200px;
+}
