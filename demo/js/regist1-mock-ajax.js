@@ -3,25 +3,25 @@
     var captcha = '';
     var timer = null;
 
-    // 获取所在城市[todo:替换成相应提供的接口]
-    $.post('getCity', function(data) {
+    // - mock数据 - 获取所在城市[todo:替换成相应提供的接口]
+    $.getJSON('js/data/city.json', function(data) {
         if (data.status == 0) {
             var template = $('#city-template').html();
             Mustache.parse(template);
-            var rendered = Mustache.render(template, {city: data.city});
+            var rendered = Mustache.render(template, {city: data.result.city});
             $('#city-target').html(rendered);
         }
-    }, 'json');
+    });
 
-    // 获取验证码[todo:替换成相应提供的接口]
+    // - mock数据 - 获取验证码[todo:替换成相应提供的接口]
     $('#send-captcha').on('click', function(event) {
         var $me = $(this);
         // 验证手机号码是否合理
         var mobile = $('#mobile').val();
         if ((/^1[3|4|5|8][0-9]\d{4,8}$/.test(mobile))) {
-            $.post('sendCaptcha', {mobile: mobile}, function(data) {
+            $.getJSON('js/data/captcha.json', {mobile: mobile}, function(data) {
                 if (data.status == 0) {
-                    captcha = data.captcha;
+                    captcha = data.result.captcha;
                     // 更新验证码剩余时间
                     // 初始化时间和时间间距
                     var time = 0;
@@ -50,7 +50,7 @@
                         }
                     }
                 }
-            }, 'json');
+            });
         } else {
             $('#mobile').focus();
             alert('手机格式不合理,请检查后重新输入!');
