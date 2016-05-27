@@ -7,6 +7,7 @@
     $.getJSON('js/data/city.json', function(data) {
         if (data.status == 0) {
             var template = $('#city-template').html();
+            console.log(template);
             Mustache.parse(template);
             var rendered = Mustache.render(template, {city: data.result.city});
             $('#city-target').html(rendered);
